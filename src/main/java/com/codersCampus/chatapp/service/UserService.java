@@ -12,6 +12,7 @@ public class UserService {
     private final List<User> users = new ArrayList<>();
 
     public void addUser(User user) {
+        System.out.println("Adding user: " + user.getUsername());
         users.add(user);
     }
 

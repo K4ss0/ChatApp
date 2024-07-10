@@ -11,20 +11,20 @@
 </head>
 <body>
     <h3>Please login below</h3>
-    <div id="login">
+    <div id="login" th:if="${username == null}">
         <form id="loginForm" th:action="@{/login}" method="post">
             <label for="username">Enter Username:</label>
-            <input type="text" id="username" name="username" required>
+            <input type="text" id="username" name="username" autocomplete="username" required>
         </form>
     </div>
 
-    <div id="chat">
-        <h2>Welcome,<span id="user"></span></h2>
+    <div id="chat" th:if="${username != null}">
+        <h2>Welcome,<span id="user" th:text="${username}"></span></h2>
         <div>
             <h3>Channels</h3>
             <ul>
-                <li>General Chat</li>
-                <li>Private Chat</li>
+                <li><a href="/channels/general">General Chat</a></li>
+                <li><a href="/channels/private">Private Chat</a></li>
             </ul>
         </div>
     </div>

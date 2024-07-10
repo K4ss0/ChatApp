@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Chat</title>
+</head>
+<body>
+<div id="chat">
+    <h2>Welcome, <span id="user" th:text="${username}"></span></h2>
+    <div>
+        <h3>Channels</h3>
+        <ul>
+            <li><a href="/channels/general">General Chat</a></li>
+            <li><a href="/channels/private">Private Chat</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
