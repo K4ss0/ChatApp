@@ -1,12 +1,12 @@
 User log in
-    Keystroke listener for "Enter" key to save username
-    log in grants access to chat channel
+    x Keystroke listener for "Enter" key to save username
+    x log in grants access to chat channel
     if you dont have a saved username it redirects to log in page with an alert
     once log in is complete populate channels on welcome page
-    username will need to be saved temporarily while program is active
-    build a log in controller
-    build a log in service
-    build a user name object
+    x username will need to be saved temporarily while program is active
+    x build a log in controller
+    x build a log in service
+    x build a user name object
 
 Chat channel page
     channel 1: general chat

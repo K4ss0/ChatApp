@@ -1,35 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Welcome to Chat</title>
-    <style>
-        #chat{
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
 </head>
 <body>
-    <h3>Please login below</h3>
-    <div id="login" th:if="${username == null}">
-        <form id="loginForm" th:action="@{/login}" method="post">
-            <label for="username">Enter Username:</label>
-            <input type="text" id="username" name="username" autocomplete="username" required>
-        </form>
-    </div>
+<h3 id="loginPrompt">Please login below</h3>
+<div id="login">
+    <label for="username">Enter Username:</label>
+    <input type="text" id="username" name="username" autocomplete="off" required>
+</div>
+<br>
+<div id="channels">
+    <h3>Chat Channels</h3>
+    <ul>
+        <li><a id="generalChannel" th:href="@{/channels/general}">General Chat</a></li>
+        <li><a id="privateChannel" th:href="@{/channels/private}">Private Chat</a></li>
+    </ul>
+</div>
 
-    <div id="chat" th:if="${username != null}">
-        <h2>Welcome,<span id="user" th:text="${username}"></span></h2>
-        <div>
-            <h3>Channels</h3>
-            <ul>
-                <li><a href="/channels/general">General Chat</a></li>
-                <li><a href="/channels/private">Private Chat</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <script src="/js/login.js"></script>
-
+<script src="/js/login.js"></script>
 </body>
 </html>
