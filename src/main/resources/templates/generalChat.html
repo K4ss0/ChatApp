@@ -7,13 +7,10 @@
 </head>
 <body>
     <h2>General Chat </h2>
-    <p>Welcome, <span th:text="${username}"></span> </p>
+    <p>Welcome, <span id="username" th:text="${username}"></span> </p>
+    <div id="messages" class="messages"></div>
     <div id="chatBox">
-        <label for="messageInput">Enter your message:</label>
-        <input type="text" id="messageInput" autocomplete="off">
-    </div>
-    <div id="messages">
-
+        <input type="text" id="messageInput" autocomplete="off" placeholder="Type your messae here...">
     </div>
     <script src="/js/chat.js"></script>
 </body>
